@@ -1,0 +1,233 @@
+/* ---------------------------------------------------
+    Custom
+----------------------------------------------------- */
+*{
+  margin: 0px;
+  padding: 0px;
+  user-select: auto;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #e6e6e6;
+}
+
+p {
+    text-align: left;
+    font-family: Helvetica, sans-serif;
+    padding: 5px; 
+    overflow-wrap: break-word;
+    max-width: 800px;
+    font-size: 14px;
+    line-height: 1.2em;
+    letter-spacing: 0.2px;
+}
+
+hr {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+h1 {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: bold;
+  max-width: 800px;
+  margin-top: -40px;
+  margin-left: -10px;
+}
+
+h2 {
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+  color: black;
+  font-family: Helvetica;
+  max-width: 800px;
+}
+
+h3 {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+h5 {
+  padding: 10px;
+  text-align: left;
+  font-size: 12px;
+  color: black;
+  font-family: Helvetica;
+  max-width: 800px;
+}
+
+.figures {
+  border:2px solid gray;
+  padding: 2px;
+  margin-left: 30px;
+  margin-top: 2px;
+  }
+
+.caption {
+  text-align: left;
+  margin-left: 30px;
+  margin-bottom: 25px;
+  font-family:helvetica;  
+  overflow-wrap: break-word;
+  max-width: 700px;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  }
+
+.audio {
+  border: 2px;
+  padding: 2px;
+  margin-left: 30px;
+  margin-top: 2px;
+  }
+
+.author {
+  margin-left: 300px;
+}
+
+.highlight {
+  background-color: yellow;
+  opacity: .8;
+}
+
+#logo-img {
+    background: url("../images/ucdsc.png") no-repeat;
+    height: 120px;
+    width: 180px;
+    background-size: contain;
+    margin-left: 25px;
+    margin-top: 150px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 350px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #78b4f5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -350px;
+}
+
+#sidebar .sidebar-header {
+    padding: 13px;
+    background: #78b4f5;
+    line-height: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+#sidebar ul.components {
+    line-height: 40px;
+}
+
+#sidebar ul li a {
+    padding-left: 10px;
+    font-size: 16px;
+    display: block;
+    border-left: 4px solid transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    color: #78b4f5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: black;
+    background: #5e93cc;
+    border-left-color: black;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+    border-color: #5e93cc;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 14px !important;
+    padding-left: 30px !important;
+    background: #5e93cc;
+    line-height: 25px;
+    border-bottom: none !important;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 350px);
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -350px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 350px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+

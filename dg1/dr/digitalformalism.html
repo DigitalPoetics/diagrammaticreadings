@@ -9,11 +9,11 @@
     <title>Diagrammatic Readings</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" type="text/css" href="../css/custom.css">
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -31,10 +31,10 @@
                 <h3>Diagrammatic Readings</h3>
             </div>
             <ul class="list-unstyled components">                
-                    <li class="active">
-                        <a href="dr/home.html">Home</a>
+                    <li>
+                        <a href="home.html">Home</a>
                      </li>  
-                <li>                  
+                <li class="active">                  
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Diagrammatic Readings</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
@@ -46,8 +46,8 @@
                         <li>
                             <a href="#">2. Digital Tropology</a>
                         </li>
-                        <li>
-                            <a href="dr/digitalformalism.html">3. Digital Formalism</a>
+                        <li class="active">
+                            <a href="digitalformalism.html">3. Digital Formalism</a>
                         </li>
                         <li>
                             <a href="#">Conclusion</a>
@@ -91,22 +91,28 @@
 
         <article>
 
-            <h1>Home</h1>
+            <h1>Digital Formalism</h1>
             <hr> 
             
-            <p><q>The ideal for a book would be to lay everything out on a plane of exteriority of this kind, on a single page, the same sheet: lived events, historical determinations, concepts, individuals, groups, social formations.</q></p> 
+            <p class="paragraph">Dr. Williams makes <q>one little mistake</q> when reading <a href="https://www.poetryfoundation.org/poems/45502/the-red-wheelbarrow" 
+    target="_blank" style="text-decoration:none"><q>The Red Wheelbarrow.</q></a></p>
 
-            <p class="author">—&nbsp;Gilles&nbsp;Deleuze and Félix&nbsp;Guattari</p>
-                   
-            <p>Welcome to Diagrammatic Readings!</p>    
+        <div>
+            <audio class="audio" controls>
+                <source src="../audio/WCWsomuch.mp3" type="audio/mp3">Your browser does not support the audio element.
+            </audio>
+        </div>
+            <a href="../images/WCWsomuch.jpg" target="_blank">
+                <img class="figures" src="../images/WCWsomuch.jpg" style="width:650px; height=100px;">
+            </a>
 
-            <p>Here, you'll find the figures I made while performing research on the audio archives of postwar American poetry. These figures are best represented as new media objects rather than as pictures in books, and I hope that digital humanist projects like these will utilize the web space to query what media will count as <q>texts</q> for literary studies and what types of book-like organizations will be possible in the future.</p>
+            <p  class="caption">Figure 1. Waveform, spectrogram, and pitch contour of the first production (top) and the second production (bottom).</p>
 
-            <p>A funny story! When I submitted an article to the journal, the anonymous reader objected to my usage of the word <q>mapping</q> and exclaimed that those figures were diagrams. Thus, Diagrammatic Readings was born. I'm currently working on the related book project, <i>Diagrammatic Readings: Essays on Digital Scholarship, Postwar American Poetry, and the Audio Archive</i>, where I will report on the audio research I performed with Dr. James Lee, the principal investigator of the project, at the University of Cincinnati's Digital Scholarship Center. The objective is to develop a general framework for archival research, one that leverages the digital technology for acquisition, analysis, and visualization of archive-based corpus.</p>
-
-            <p>I look at various audio archives of poetry recordings, many of which are housed at university libraries and contain large amounts of postwar American poetry in oral form: viz., the <a href="https://libapps.libraries.uc.edu/main/data/" title="Elliston" target="_blank" style="text-decoration:none">Elliston</a> poetry audio archive housed at the University of Cincinnati; the <a href="https://writing.upenn.edu/pennsound/x/authors.php" title="PennSound" target="_blank" style="text-decoration:none">PennSound</a> archive at the University of Pennsylvania's Center for Programs in Contemporary Writing; the <a href="https://voca.arizona.edu/" title="Voca" target="_blank" style="text-decoration:none">Voca</a> audiovisual library at the University of Arizona Poetry Center; and <a href="http://www.ubu.com/sound/" title="UbuWeb" target="_blank" style="text-decoration:none">UbuWeb</a>.</p>
-
-            <p>-- Ankit Basnet</p>
+            <p class="paragraph"> Listen to the full interview on The Mary Margaret McBride Show (1950) at 
+                <a href="https://writing.upenn.edu/pennsound/x/Williams-WC.php" target="_blank" style="text-decoration:none">PennSound
+                </a>.
+            </p>
+            
 
               
 
@@ -130,7 +136,7 @@
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <!-- jQuery Custom Scroller CDN -->
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script>
         $(document).ready(function () {
